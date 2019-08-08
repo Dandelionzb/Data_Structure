@@ -137,15 +137,21 @@ MapGridCostFunction类的构造函数中，`path_costs`和`alignment_costs_`都�
   在经过预计算后，对于path_costs_和alignment_costs这两个考虑与路径距离的打分项，其内部的路径计算地图中存储的是所有点到路径的最短距离；对于goal_costs_和goal_front_costs_这两个考虑与局部目标点距离的打分项，其内部的路径计算地图中存储的是所有点到局部目标点的最短距离。
 
   - 在MapGridCostFunction::scoreTrajectory函数中，依次获取路径中的各个点坐标，并尝试将坐标转为地图坐标，如果转化失败，则scoreTrajecotry函数直接返回-4。否则，从路径计算地图中找到距离局部地图路径的距离，并将该距离（像素级）值作为该点的得分。
-  - 对于path_costs_和goal_costs_两个打分项的stop_on_failure参数为true，即如果轨迹中的某个点未障碍物或者未再路径计算地图中探索到，则表示查找该点的得分失败，这会造成scoreTrajectory函数直接返回对应的负的得分。
+  - 对于path_costs_和goal_costs_两个打分项的stop_on_failure参数为true，即如果轨迹中的某个点为障碍物或者未在路径计算地图中探索到，则表示查找该点的得分失败，这会造成scoreTrajectory函数直接返回对应的负的得分。
   - 对于goal_front_costs和alignment_costs_两个打分项对应的stop_on_failure参数为false，这是因为前向打分点有可能会出现计算距离出错的情况，例如超出地图范围，但由于前向打分点的打分失败不会带来危险，因此可以不立刻返回负得分。
   - 轨迹所有点得分的汇总方式有Last、Sum、Product三种方式，默认为Last（且没有对应的配置参数，除非自己修改源码实现），即只考虑轨迹最后一个点的打分。
 
 - goal_costs_
 
+  该打分项的思路在path_costs_的打分过程中已经描述，可以参考。
+
 - goal_front_costs_
 
+  该打分项和goal_costs_基本一样，只是参考的是机器人前向点和局部目标点的距离，而不是机器人原点和局部目标点的距离。
+
 - alignment_costs_
+
+  该打分项和goal_costs_基本一样，只是参考的是机器人前向点和局部目标点的距离，而不是机器人原点和局部目标点的距离。
 
 ## Reference
 [1] [局部路径规划之DWAPlannerROS分析](https://www.cnblogs.com/sakabatou/p/8297479.html)
