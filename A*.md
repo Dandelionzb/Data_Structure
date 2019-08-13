@@ -19,3 +19,16 @@
 1. [A*算法](https://www.cnblogs.com/21207-iHome/p/6048969.html)
 2. [A*算法详解](https://blog.csdn.net/qq_36946274/article/details/81982691)
 
+1.[global_planner源码阅读笔记](https://blog.csdn.net/flyinsilence/article/details/82898797)
+
+2.[ROS Navigation的global_planner类继承关系与实现算法](https://blog.csdn.net/Nksjc/article/details/78812066)
+
+3.[global_planner源码学习](https://blog.csdn.net/qq_41986495/article/details/86013587)
+
+4.[navigation中Global_planner进阶](https://blog.csdn.net/qq_41906592/article/details/89185808)
+
+5.[ros如何及时清除障碍物层或者超声波层的的消息](https://blog.csdn.net/u010918541/article/details/78151704)
+
+6.[costmap_2d: obstacle_layer中关于激光雷达障碍物清除不干净的解决](https://blog.csdn.net/xinmei4275/article/details/88760505)
+
+7.[Costmap2DROS分析](https://www.cnblogs.com/sakabatou/p/8297736.html)
