@@ -32,3 +32,5 @@
 6.[costmap_2d: obstacle_layer中关于激光雷达障碍物清除不干净的解决](https://blog.csdn.net/xinmei4275/article/details/88760505)
 
 7.[Costmap2DROS分析](https://www.cnblogs.com/sakabatou/p/8297736.html)
+
+8.[global_planner学习](https://zhuanlan.zhihu.com/p/46212318)
