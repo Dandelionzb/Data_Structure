@@ -356,3 +356,4 @@ https://blog.csdn.net/x_r_su/article/details/53420209
 [7] [costmap_2D](https://blog.csdn.net/x_r_su/article/details/53420310)
 [8] [costmap_2d框架函数](https://blog.csdn.net/jinking01/article/details/79447495)
 <https://www.processon.com/view/link/5cef94c5e4b0123c616771ff>
+[9] [MoveBase源码阅读笔记](https://blog.csdn.net/flyinsilence/article/details/82853766)
